@@ -116,25 +116,25 @@ export const taskApi = {
   },
 
   getAttachments: (workspaceId, taskId) =>
-    axiosInstance.get(`/workspaces/${workspaceId}/tasks/${taskId}/attachments`),
+    axiosInstance.get(`/api/workspaces/${workspaceId}/tasks/${taskId}/attachments`),
 
   deleteAttachment: (workspaceId, taskId, attachmentId) =>
     axiosInstance.delete(
-      `/workspaces/${workspaceId}/tasks/${taskId}/attachments/${attachmentId}`,
+      `/api/workspaces/${workspaceId}/tasks/${taskId}/attachments/${attachmentId}`,
     ),
 
   reorder: (workspaceId, taskIds) =>
-    axiosInstance.patch(`/workspaces/${workspaceId}/tasks/reorder`, {
+    axiosInstance.patch(`/api/workspaces/${workspaceId}/tasks/reorder`, {
       taskIds,
     }),
 
   approve: (workspaceId, taskId, approvalNote) =>
-    axiosInstance.post(`/workspaces/${workspaceId}/tasks/${taskId}/approve`, {
+    axiosInstance.post(`/api/workspaces/${workspaceId}/tasks/${taskId}/approve`, {
       approvalNote,
     }),
 
   reject: (workspaceId, taskId, approvalNote) =>
-    axiosInstance.post(`/workspaces/${workspaceId}/tasks/${taskId}/reject`, {
+    axiosInstance.post(`/api/workspaces/${workspaceId}/tasks/${taskId}/reject`, {
       approvalNote,
     }),
 };
