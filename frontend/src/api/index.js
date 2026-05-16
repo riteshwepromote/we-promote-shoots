@@ -16,7 +16,7 @@ export const authApi = {
 
   // Admin only
   getAllUsers: (page = 1, limit = 20) =>
-    axiosInstance.get(`/api/api/auth/users?page=${page}&limit=${limit}`),
+    axiosInstance.get(`/api/auth/users?page=${page}&limit=${limit}`),
 
   getHRDashboard: () => axiosInstance.get("/api/auth/hr-dashboard"),
 
